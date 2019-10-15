@@ -10,7 +10,7 @@
         <!--Lista De Tarefas Catia-->
         <scene sceneID="saa-Cw-bVt">
             <objects>
-                <tableViewController id="WgD-wP-zHZ" sceneMemberID="viewController">
+                <tableViewController id="WgD-wP-zHZ" customClass="TarefasTableViewController" customModule="TarefasCatia" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="knV-Ld-9St">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="963.76811594202911" y="78.348214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Cadastro Tarefa View Controller-->
         <scene sceneID="eNy-Oz-HqI">
             <objects>
-                <viewController id="KIU-3r-NjS" sceneMemberID="viewController">
+                <viewController id="KIU-3r-NjS" customClass="CadastroTarefaViewController" customModule="TarefasCatia" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7o5-Rc-Ko0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,6 +69,9 @@
                                 <state key="normal" title="Adicionar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="adicionarTarefa:" destination="KIU-3r-NjS" eventType="touchUpInside" id="Cc4-DU-GIN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -86,6 +89,9 @@
                         <viewLayoutGuide key="safeArea" id="fab-TA-Pjv"/>
                     </view>
                     <navigationItem key="navigationItem" id="gJE-aK-Hvn"/>
+                    <connections>
+                        <outlet property="tarefaCampo" destination="Pd3-1C-wMK" id="9AU-Rd-0rw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bJi-nL-Cre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
